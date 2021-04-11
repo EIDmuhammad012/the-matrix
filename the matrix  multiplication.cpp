@@ -2,7 +2,7 @@
 #include<stdlib.h>  
 int main() 
 {  
-int r,c,a[10][10],b[10][10],mul[10][10],H,G,k;    
+int r,c,a[10][10],b[10][10],pro[10][10],H,G,k;    
 system("cls");  
 
 printf("enter the number of row=");    
@@ -23,21 +23,22 @@ for(H=0;H<r;H++) {
   }    
 }    
     
-printf("multiply of the matrix=\n");    
+printf("product of the matrix=\n");    
 for(H=0;H<r;H++) {    
   for(G=0;G<c;G++) {    
-  mul[H][G]=0;    
+  pro[H][G]=0;    
     for(k=0;k<c;k++) {    
-    mul[H][G]+=a[H][k]*b[k][G];    
+    pro[H][G]+=a[H][k]*b[k][G];    
     }    
   }    
 }    
 for(H=0;H<r;H++) {    
   for(G=0;G<c;G++) {    
-  printf("%d\t",mul[H][G]);    
+  printf("%d\t",pro[H][G]);    
   }    
   printf("\n");    
 }    
 return 0;
 }
+
 
